@@ -1,0 +1,31 @@
+# Компилятор C++
+CXX = g++
+
+# Флаги компиляции
+CXXFLAGS = -std=c++17 `pkg-config --cflags gtk4`
+
+# Флаги линковки
+LDFLAGS = `pkg-config --libs gtk4`
+
+# Имя исполняемого файла
+TARGET = calculator
+
+# Исходные файлы
+SOURCES = calculator.cpp
+
+# Правило по умолчанию
+all: $(TARGET)
+
+# Правило компиляции
+$(TARGET): $(SOURCES)
+	$(CXX) $(CXXFLAGS) -o $(TARGET) $(SOURCES) $(LDFLAGS)
+
+# Очистка
+clean:
+	rm -f $(TARGET)
+
+# Установка зависимостей (выполнить вручную)
+deps:
+	sudo apt install g++ pkg-config libgtk-4-dev build-essential
+
+.PHONY: all clean deps

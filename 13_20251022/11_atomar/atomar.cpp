@@ -10,7 +10,8 @@ std::atomic<int> atomic_counter(0);
 void atomic_increment() {
     for (int i = 0; i < 100000; ++i) {
         // Атомарная операция - не требует синхронизации
-        atomic_counter.fetch_add(1, std::memory_order_relaxed);
+        //atomic_counter.fetch_add(1, std::memory_order_relaxed);
+        atomic_counter++;
     }
 }
 

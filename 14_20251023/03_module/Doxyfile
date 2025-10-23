@@ -1,0 +1,29 @@
+# Базовые настройки проекта
+PROJECT_NAME           = "Math and String Libraries"
+PROJECT_NUMBER         = 1.0
+PROJECT_BRIEF          = "Пример создания библиотек на C++"
+
+# Настройки вывода
+OUTPUT_DIRECTORY       = docs
+CREATE_SUBDIRS         = NO
+ALLOW_UNICODE_NAMES    = YES
+
+# Настройки извлечения
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+
+# Настройки исходного кода
+INPUT                  = .
+FILE_PATTERNS          = *.h *.cpp
+RECURSIVE              = NO
+
+# Настройки генерации
+GENERATE_HTML          = YES
+GENERATE_LATEX         = NO
+GENERATE_TREEVIEW      = YES
+
+# Настройки диаграмм
+HAVE_DOT               = YES
+CALL_GRAPH             = YES
+CALLER_GRAPH           = YES

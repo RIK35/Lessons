@@ -1,0 +1,15 @@
+[Unit]
+Description=System Monitor Daemon
+Documentation=https://example.com
+After=network.target
+
+[Service]
+Type=simple
+User=root
+ExecStart=/usr/local/bin/system_monitor_daemon
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
